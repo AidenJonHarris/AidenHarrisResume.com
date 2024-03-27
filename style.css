@@ -1,3 +1,26 @@
+/* Add basic styling for shapes */
+.shape {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    pointer-events: none; /* Ensure shapes do not interfere with content */
+    z-index: -1; /* Move shapes behind content */
+}
+
+.circle {
+    border-radius: 50%;
+    background-color: rgba(255, 99, 71, 0.2); /* Light coral color */
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid rgba(255, 165, 0, 0.2); /* Orange color */
+}
+
+/* Incorporate provided styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -77,29 +100,6 @@ footer nav a {
 
 footer nav a:hover {
     color: #FF6347;
-}
-
-/* Add basic styling for shapes */
-.shape {
-    position: fixed;
-    width: 50px;
-    height: 50px;
-    background-color: rgba(255, 99, 71, 0.2); /* Light coral color */
-    border-radius: 50%;
-    pointer-events: none; /* Ensure shapes do not interfere with content */
-    z-index: -1; /* Move shapes behind content */
-}
-
-.circle {
-    border-radius: 50%;
-}
-
-.triangle {
-    width: 0;
-    height: 0;
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
-    border-bottom: 50px solid rgba(255, 165, 0, 0.2); /* Orange color */
 }
 
 
