@@ -13,45 +13,28 @@ body {
 }
 
 /* Add ambient shapes */
-.shapes {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* Ensure shapes do not interfere with content */
-    z-index: -1; /* Move shapes behind content */
-}
-
-.shape {
+body::before {
+    content: '';
     position: absolute;
-    animation: moveShapes 30s infinite linear; /* Animation for moving shapes */
-}
-
-/* Circles */
-.circle {
     width: 200px;
     height: 200px;
     background: radial-gradient(circle, rgba(255, 99, 71, 0.2) 30%, transparent 70%);
+    top: 100px;
+    right: 100px;
+    z-index: -1;
 }
 
-/* Triangles */
-.triangle {
+body::after {
+    content: '';
+    position: absolute;
     width: 0;
     height: 0;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
     border-bottom: 100px solid rgba(255, 165, 0, 0.2); /* Orange color */
-}
-
-/* Animation keyframes */
-@keyframes moveShapes {
-    0% {
-        transform: translate(0, 0);
-    }
-    100% {
-        transform: translate(50vw, 50vh); /* Move shapes diagonally across the viewport */
-    }
+    bottom: 100px;
+    left: 100px;
+    z-index: -1;
 }
 
 header {
@@ -114,13 +97,14 @@ footer {
     text-align: center;
 }
 
-footer nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-}
+    footer nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+    }
 
-footer nav a:hover {
-    color: #FF6347;
-}
+        footer nav a:hover {
+            color: #FF6347;
+        }
+
 
